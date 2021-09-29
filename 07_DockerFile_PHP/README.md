@@ -1,4 +1,4 @@
-#Carregar o container do MySQL
+# Carregar o container do MySQL
 
 docker run -d --rm --name=mysql  \
     -p 3306:3306 \
