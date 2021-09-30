@@ -20,7 +20,7 @@
                 <h1 class="display-3">Aulas do curso de Docker</h1>
 
                 <?php
-                $conn = new mysqli('192.168.68.106', $user, 'senha', 'docker', '3306');
+                $conn = new mysqli($host, $user, $password, $database, $port);
 
                 $query = 'SELECT aula_id, nome, link FROM aula';
                 $res = $conn->query($query);

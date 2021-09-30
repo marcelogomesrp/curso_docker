@@ -21,7 +21,7 @@ docker build -f Dockerfile_dev -t php_mysqli:7.2-apache .
 ```
 ## Carregar o container para desenvolvimento
 ```
-docker run -d --rm --name=php -p 80:80 -v $(pwd):/var/www/html  php_mysqli:7.2-apache
+docker run -d --rm --name=php -p 80:80 -v $(pwd):/var/www/html php_mysqli:7.2-apache
 ```
 
 # Gerar a image com o nosso projeto
