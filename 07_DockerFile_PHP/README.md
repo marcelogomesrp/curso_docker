@@ -1,3 +1,6 @@
+# Explicação
+[Curso de Docker - 07 Desenvolvendo e publicando uma aplicação php com docker usando o dockerfile](https://youtu.be/gZRMWIX2P-I)
+
 # Carregar o container do MySQL
 
 ```
