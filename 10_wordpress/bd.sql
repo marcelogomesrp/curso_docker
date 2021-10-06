@@ -2,5 +2,5 @@
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'senha';
 FLUSH PRIVILEGES;
 
-CREATE DATABASE wordpŕess;
+CREATE DATABASE wordpress;
 
