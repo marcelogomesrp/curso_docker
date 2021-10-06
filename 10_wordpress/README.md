@@ -17,3 +17,5 @@ docker run -d --rm --name=mysql  \
 mysql -u root --password=senha -h 192.168.68.106 < bd.sql
 ```
 
+# Site do workdpress
+[https://br.wordpress.org/download/#download-install](https://br.wordpress.org/download/#download-install)
