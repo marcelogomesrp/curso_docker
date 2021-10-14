@@ -30,7 +30,6 @@ apt-get update && apt-get install iputils-ping -y
 ```
 
 docker run -d --rm --name=mysql  \
-    -p 3306:3306 \
     -v $(pwd)/datadir:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=senha \
     -e MYSQL_ROOT_HOST=% \
