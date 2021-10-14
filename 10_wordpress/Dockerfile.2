@@ -1,0 +1,7 @@
+FROM php:7.2-apache
+RUN docker-php-ext-install mysqli
+COPY wordpress-entrypoint.sh /usr/local/bin/
+#ADD https://br.wordpress.org/latest-pt_BR.tar.gz /var/www/html/
+#RUN tar -xzf latest-pt_BR.tar.gz -C /var/www/html --strip-components=1;
+ENTRYPOINT [ "wordpress-entrypoint.sh" ]
+CMD ["apache2-foreground"]
