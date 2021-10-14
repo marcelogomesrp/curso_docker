@@ -10,6 +10,20 @@ docker network remove minha_rede
 
 ```
 
+# Subir dois containers na minha_rede
+
+```
+docker run -it --rm --name=no1 --network minha_rede ubuntu:20.04
+docker run -it --rm --name=no2 --network minha_rede ubuntu:20.04
+
+```
+
+## Instalar o ping em um dos containers
+```
+apt-get update && apt-get install iputils-ping -y
+
+```
+
 
 # Carregar o container do MySQL na rede minha_rede
 
