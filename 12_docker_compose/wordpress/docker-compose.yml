@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+   mysql:
+       image: mysql:8    
+       container_name: mysql 
+       env_file: .env 
+       command: --default-authentication-plugin=mysql_native_password
+       restart: always
+       environment:
+           MYSQL_ROOT_PASSWORD: ${SENHA}          
+           MYSQL_DATABASE: "wordpress"                              
+       volumes:
+           - /data/tmp/mysql:/var/lib/mysql
+       networks:
+           - site-network
+
+   phpmyadmin:
+       image: phpmyadmin/phpmyadmin:latest
+       ports:
+           - "81:80"
+       environment:
+           PMA_HOST: mysql
+           MYSQL_ROOT_PASSWORD: ${SENHA}
+       networks:
+           - site-network
+
+   wordpress:
+       depends_on:
+         - mysql
+       image: wordpress:5.8.1-apache
+       ports:
+         - '82:80'
+       restart: always
+       volumes: ['./wp/:/var/www/html']
+       environment:
+         WORDPRESS_DB_HOST: mysql:3306
+         WORDPRESS_DB_USER: root
+         WORDPRESS_DB_PASSWORD: ${SENHA}
+       networks:
+           - site-network
+
+networks:
+  site-network:
+      driver: bridge

@@ -1,0 +1,4 @@
+version: '3.7'
+services:
+   wordpress:
+       volumes: ['./wp2/:/var/www/html']
