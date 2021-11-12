@@ -1,0 +1,12 @@
+FROM ubuntu:20.04
+RUN apt-get update && \
+    apt-get install -y \
+    x11-apps \
+    libcanberra-gtk-module \
+    gedit \
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /.cache/dconf/ /.local/share && chmod -R 777 /.cache && chmod -R 777 /.local 
+
+ENTRYPOINT [ "gedit" ]

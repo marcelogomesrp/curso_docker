@@ -1,0 +1,10 @@
+FROM ubuntu:20.04
+RUN apt-get update && \
+    apt-get install -y \    
+    firefox \
+    adwaita-icon-theme-full \
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /.cache/dconf/ && chmod -R 777 /.cache && mkdir /.mozilla && chmod -R 777 /.mozilla
+CMD firefox
