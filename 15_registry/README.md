@@ -87,7 +87,7 @@ Edit or create the file /etc/docker/daemon.json, change the 192.168.68.106 to yo
 
 ```
 {
-    "insecure-registries" : [ "192.168.68.106" ]
+    "insecure-registries" : [ "192.168.68.106:5000" ]
 }
 ```
 
