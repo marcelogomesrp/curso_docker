@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:1.21-alpine    
+    restart: always
+    ports:
+    - "80:80"          

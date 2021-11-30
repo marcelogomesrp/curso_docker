@@ -1,5 +1,6 @@
 # Youtube
-
+[Curso de Docker - 15 Docker Registry](https://youtu.be/1-43ifaQkNk)
+[Curso de Docker - 15 B -  Docker registry com SSL e Interface Web](https://youtu.be/GrXDWNhMUzc)
 # Commands to test
 
 ## Get any image
