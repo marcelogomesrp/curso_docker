@@ -1,0 +1,2 @@
+ARG  CODE_VERSION=latest
+FROM ubuntu:${CODE_VERSION}

@@ -1,0 +1,1 @@
+python-cfonts==1.5.2

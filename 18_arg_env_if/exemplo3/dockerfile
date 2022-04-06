@@ -1,0 +1,16 @@
+ARG  CODE_VERSION=3.10
+FROM python:${CODE_VERSION}
+#RUN adduser -D app
+RUN adduser --disabled-password --gecos '' app
+USER app
+COPY --chown=app:app ./app /app
+WORKDIR /app
+ARG BRANCH="develop"
+RUN if [ "$BRANCH" = "release" ] ;\
+ then \
+    pip install --user -r requirements.txt ;\
+ else \
+    pip install --user -r requirements-dev.txt ;\
+fi 
+
+ENV PATH="/home/app/.local/bin:/app:${PATH}"

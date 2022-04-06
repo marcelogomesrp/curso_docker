@@ -1,0 +1,4 @@
+ARG  CODE_VERSION=latest
+FROM ubuntu:${CODE_VERSION}
+ARG BRANCH="develop"
+RUN if [ "$BRANCH" = "release" ] ; then  >'producao' ; else >'desenvolmento' ; fi 
